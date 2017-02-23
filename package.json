@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/iamshaunjp/rest-api-playlist/issues"
   },
-  "homepage": "https://github.com/iamshaunjp/rest-api-playlist#readme"
+  "homepage": "https://github.com/iamshaunjp/rest-api-playlist#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
 }
