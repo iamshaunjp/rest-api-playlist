@@ -1,4 +1,4 @@
-const express = require express();
+const express = require ('express');
 const router = express.Router();
 
 // get a list of ninjas from the db
