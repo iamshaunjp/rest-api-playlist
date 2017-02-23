@@ -9,7 +9,7 @@ const NinjaSchema = new Schema({
     },
     rank: {
         type: String
-    }
+    },
     available: {
         type: Boolean,
         default: false
