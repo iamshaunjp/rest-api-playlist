@@ -16,7 +16,7 @@
 
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
         <script src="https://unpkg.com/react@15/dist/react.js"></script>
-        <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
 
         <!-- Create React Component -->
         <script type="text/babel">
@@ -29,12 +29,13 @@
             render: function(){
                 var ninjas = this.state.ninjas;
                 ninjas = ninjas.map(function(ninja, index){
+                    console.log(ninja);
                     return(
                         <li key={index}>
-                            <span className={ninja.obj.available}></span>
-                            <span className="name">{ninja.obj.name}</span>
-                            <span className="rank">{ninja.obj.rank}</span>
-                            <span className="dist">{Math.floor(ninja.dis / 1000)} km</span>
+                            <span className={ninja.available}></span>
+                            <span className="name">{ninja.name}</span>
+                            <span className="rank">{ninja.rank}</span>
+                            <span className="dist">{Math.floor(ninja.dist.calculated / 1000)} km</span>
                         </li>
                     );
                 });
@@ -55,7 +56,6 @@
                 e.preventDefault();
                 var lng = this.refs.lng.value;
                 var lat = this.refs.lat.value;
-
                 fetch('/api/ninjas?lng=' + lng + '&lat=' + lat).then(function(data){
                     return data.json();
                 }).then( json => {
