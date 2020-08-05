@@ -1,0 +1,25 @@
+{
+  "name": "rest-api-playlist",
+  "version": "1.0.0",
+  "description": "Course files for the REST API tutorial series on The Net Ninja Youtube channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamshaunjp/rest-api-playlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamshaunjp/rest-api-playlist/issues"
+  },
+  "homepage": "https://github.com/iamshaunjp/rest-api-playlist#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.4"
+  }
+}
